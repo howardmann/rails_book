@@ -11,14 +11,14 @@ class MonstersController < ApplicationController
   def create
     @monster = Monster.new(monster_params)
     @monster.save
-    redirect_to monster_path(@monster)
+    render 'show'
   end
 
   def update
     @monster = Monster.find(params[:id])
     @monster.update_attributes(monster_params)
     @monster.save
-    redirect_to monster_path(@monster)
+    render 'show'
   end
 
   def destroy

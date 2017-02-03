@@ -12,14 +12,14 @@ class PlanetsController < ApplicationController
   def create
     @planet = Planet.new(planet_params)
     @planet.save
-    redirect_to planet_path(@planet)
+    render 'show'
   end
 
   def update
     @planet = Planet.find(params[:id])
     @planet.update_attributes(planet_params)
     @planet.save
-    redirect_to planet_path(@planet)
+    render 'show'
   end
 
   def destroy

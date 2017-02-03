@@ -1,4 +1,12 @@
 Rails.application.configure do
+
+  # HM: Part of accepting CORS and rack-cors gemfile
+  config.middleware.use Rack::Cors do
+    allow do
+      origins '*'
+      resource '*', headers: :any, methods: [:get, :post, :put, :delete, :options]
+    end
+  end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

@@ -1,3 +1,3 @@
-json.monsters @monsters, :id, :name, :description, :planet_id
+json.monsters @monsters, :id, :name, :age, :description, :planet_id
 
 json.planets @planets, :id, :name, :description
